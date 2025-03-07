@@ -1,23 +1,48 @@
-import logo from './logo.svg';
+// import { use } from 'react';
 import './App.css';
+import Student from './component/Student';
+
+
 
 function App() {
+  const users = [
+    {
+      fullName : "Brendon McCullam",
+      country : "New Zeland",
+      age : 29
+    },
+    {
+      fullName : "Crish Gale",
+      country : "WestIndis",
+      age : 39
+    },
+    {
+      fullName : "Brendon McCullam",
+      country : "New Zeland",
+      age : 29
+    },
+    {
+      fullName : "Crish Gale",
+      country : "WestIndis",
+      age : 39
+    },
+    {
+      fullName : "Brendon McCullam",
+      country : "New Zeland",
+      age : 29
+    },
+    {
+      fullName : "Crish Gale",
+      country : "WestIndis",
+      age : 39
+    }
+   
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {users.map((user, idx)=>(
+        <Student key={idx} fullName = {user.fullName} country ={user.country} age={user.age}/>
+      ))}
     </div>
   );
 }
